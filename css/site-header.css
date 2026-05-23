@@ -57,6 +57,7 @@ body.has-fixed-header {
 
 .site-header__nav > .container {
   min-height: 70px;
+  padding: 1rem;
 }
 
 .site-header__brand {
