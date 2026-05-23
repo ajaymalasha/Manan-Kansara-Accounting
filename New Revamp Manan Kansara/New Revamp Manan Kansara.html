@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kansara & Associates — CPA | Accounting & Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Neue Haas Grotesk via Adobe Fonts / fallback stack -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap" rel="stylesheet">
+  <style>
+    /* Neue Haas Grotesk Display Pro — load via Adobe/Typekit if available, else stack */
+    @import url("https://use.typekit.net/placeholder.css"); /* swap with real kit if licensed */
+  </style>
+  <style>
+    /* ── Font stack: Neue Haas Grotesk Display Pro with tight system fallbacks ── */
+    :root {
+      --font-display: 'neue-haas-grotesk-display-pro', 'Haas Grot Disp', 'Helvetica Neue', 'Arial Nova', Arial, sans-serif;
+      --font-body: 'neue-haas-grotesk-display-pro', 'Helvetica Neue', Arial, sans-serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+    }
+  </style>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --cream: #f8f5ef;
+      --cream-dark: #ede9df;
+      --white: #ffffff;
+      --slate: #8892a4;
+      --charcoal: #2d3748;
+      --green-accent: #1a6b4a;
+      --green-light: #2d9066;
+      --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--navy);
+      overflow-x: hidden;
+      font-weight: 450;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      background: var(--navy);
+      color: var(--slate);
+      font-size: 12px;
+      font-weight: 450;
+      padding: 10px 0;
+      letter-spacing: 0.04em;
+    }
+    .topbar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar a { color: var(--slate); text-decoration: none; transition: var(--transition); margin-left: 24px; }
+    .topbar a:hover { color: var(--gold); }
+    .topbar-left { display: flex; gap: 24px; }
+    .topbar-left span { margin-right: 6px; }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      transition: var(--transition);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-mark svg { width: 24px; height: 24px; fill: var(--gold); }
+    .logo-text { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.15; letter-spacing: -0.01em; }
+    .logo-text span { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 500; color: var(--slate); letter-spacing: 0.14em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--charcoal); text-decoration: none; letter-spacing: 0.01em; transition: var(--transition); position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--gold); transition: var(--transition); }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 11px 24px;
+      border-radius: 6px;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      transition: var(--transition) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: var(--transition); }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--navy);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&auto=format&fit=crop&q=60');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+    }
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(201,168,76,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(26,107,74,0.08) 0%, transparent 40%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 6.5vw, 96px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; font-weight: 300; letter-spacing: -0.01em; }
+    .hero-desc {
+      font-size: 17px;
+      font-weight: 450;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 480px;
+      animation: fadeUp 0.8s 0.2s ease both;
+      letter-spacing: 0.01em;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 15px 32px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 35px rgba(201,168,76,0.35); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 32px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+    .stat-item { text-align: left; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-label { font-size: 11px; font-weight: 500; color: var(--slate); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .hero-card-main {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+    .hero-card-main::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.3) 0%, transparent 50%, rgba(26,107,74,0.2) 100%);
+      z-index: -1;
+    }
+    .card-top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+    .card-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 100px; letter-spacing: 0.06em; }
+    .card-year { color: var(--slate); font-size: 13px; }
+    .services-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .service-mini-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 16px;
+      transition: var(--transition);
+    }
+    .service-mini-item:hover { border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.05); }
+    .service-mini-icon { font-size: 24px; margin-bottom: 8px; }
+    .service-mini-name { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.8); font-family: var(--font-display); letter-spacing: 0.01em; }
+    .hero-metric {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .metric-icon { font-size: 28px; }
+    .metric-text { color: var(--navy); }
+    .metric-text strong { display: block; font-size: 26px; font-family: var(--font-display); font-weight: 800; letter-spacing: -0.03em; }
+    .metric-text span { font-size: 12px; font-weight: 500; opacity: 0.85; }
+
+    /* Floating cards */
+    .float-card {
+      position: absolute;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: float 4s ease-in-out infinite;
+    }
+    .float-card-1 { top: -24px; right: -24px; animation-delay: 0s; }
+    .float-card-2 { bottom: -20px; left: -24px; animation-delay: 1.5s; }
+    .float-card-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .float-card-icon.green { background: rgba(26,107,74,0.12); }
+    .float-card-icon.gold { background: rgba(201,168,76,0.12); }
+    .float-card-text strong { font-size: 13px; color: var(--navy); font-weight: 600; display: block; }
+    .float-card-text span { font-size: 11px; color: var(--slate); }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── CLIENTS / TRUST BAR ─── */
+    .trustbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 28px 0;
+    }
+    .trustbar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      overflow: hidden;
+    }
+    .trustbar-label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); white-space: nowrap; font-family: var(--font-display); }
+    .trustbar-logos { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .trust-logo { font-size: 14px; font-weight: 700; color: var(--slate); opacity: 0.6; letter-spacing: 0.06em; transition: var(--transition); font-family: var(--font-display); }
+    .trust-logo:hover { opacity: 1; color: var(--navy); }
+    .trust-divider { width: 1px; height: 28px; background: var(--cream-dark); }
+
+    /* ─── SECTION SHARED STYLES ─── */
+    section { padding: 100px 0; }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-family: var(--font-display);
+    }
+    .section-label::before { content: ''; width: 28px; height: 2px; background: var(--gold); }
+    h2.section-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 4.5vw, 64px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    h2.section-title em { color: var(--green-accent); font-style: italic; font-weight: 300; }
+    .section-desc { font-size: 16px; font-weight: 450; color: var(--slate); line-height: 1.8; max-width: 560px; letter-spacing: 0.01em; }
+
+    /* ─── ABOUT ─── */
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-image-block { position: relative; }
+    .about-img-main {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--cream-dark);
+    }
+    .about-img-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-img-secondary {
+      position: absolute;
+      bottom: -32px;
+      right: -32px;
+      width: 56%;
+      aspect-ratio: 4/3;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 6px solid var(--white);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    .about-img-secondary img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .years-badge {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 96px;
+      height: 96px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(201,168,76,0.4);
+    }
+    .years-badge strong { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; letter-spacing: -0.03em; }
+    .years-badge span { font-size: 9px; font-weight: 700; color: var(--navy); letter-spacing: 0.12em; text-transform: uppercase; }
+    .about-content { padding-left: 20px; }
+    .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+    .pillar {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 3px solid var(--gold);
+      transition: var(--transition);
+    }
+    .pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 35px rgba(0,0,0,0.07); }
+    .pillar h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: -0.01em; font-family: var(--font-display); }
+    .pillar p { font-size: 13px; font-weight: 450; color: var(--slate); line-height: 1.65; }
+    .about-cta { margin-top: 36px; display: flex; align-items: center; gap: 20px; }
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      font-family: var(--font-display);
+      letter-spacing: 0.03em;
+    }
+    .btn-dark:hover { background: var(--charcoal); transform: translateY(-2px); }
+    .about-cta-link { font-size: 14px; color: var(--green-accent); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: var(--transition); font-family: var(--font-display); letter-spacing: 0.02em; }
+    .about-cta-link:hover { gap: 10px; }
+
+    /* ─── SERVICES ─── */
+    .services { background: var(--cream); }
+    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 32px;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--green-accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.1);
+      border-color: rgba(201,168,76,0.15);
+    }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .service-card:hover .service-icon { background: rgba(201,168,76,0.1); }
+    .service-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.02em; }
+    .service-card p { font-size: 14px; font-weight: 450; color: var(--slate); line-height: 1.75; margin-bottom: 20px; }
+    .service-link { font-size: 13px; font-weight: 700; color: var(--gold); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: var(--transition); letter-spacing: 0.04em; }
+    .service-link:hover { gap: 10px; }
+
+    /* ─── NUMBERS ─── */
+    .numbers {
+      background: var(--navy);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .numbers::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&auto=format&fit=crop&q=40');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.07;
+    }
+    .numbers-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; }
+    .number-item {
+      background: var(--navy);
+      padding: 48px 36px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .number-item:hover { background: rgba(255,255,255,0.03); }
+    .number-value {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.04em;
+    }
+    .number-unit { font-size: 40px; font-weight: 400; }
+    .number-label { font-size: 12px; font-weight: 500; color: var(--slate); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* ─── WHY US ─── */
+    .whyus { background: var(--white); }
+    .whyus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .reasons { display: flex; flex-direction: column; gap: 0; }
+    .reason {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--cream-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .reason:first-child { border-top: 1px solid var(--cream-dark); }
+    .reason:hover { padding-left: 8px; }
+    .reason-number {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--cream-dark);
+      line-height: 1;
+      min-width: 72px;
+      transition: var(--transition);
+      letter-spacing: -0.04em;
+    }
+    .reason:hover .reason-number { color: var(--gold); }
+    .reason-content h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; font-family: var(--font-display); letter-spacing: -0.01em; }
+    .reason-content p { font-size: 14px; font-weight: 450; color: var(--slate); line-height: 1.75; }
+    .whyus-visual {
+      position: sticky;
+      top: 120px;
+    }
+    .whyus-card {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 40px;
+      color: var(--white);
+    }
+    .whyus-card h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .whyus-card .subtitle { font-size: 13px; font-weight: 450; color: var(--slate); margin-bottom: 32px; letter-spacing: 0.02em; }
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; font-weight: 450; color: rgba(255,255,255,0.9); line-height: 1.55; letter-spacing: 0.01em; }
+    .check { width: 20px; height: 20px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; color: var(--gold); margin-top: 1px; }
+    .consultation-cta {
+      margin-top: 32px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .consultation-cta p { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font-display); letter-spacing: -0.01em; }
+    .consultation-cta a {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+      font-family: var(--font-display);
+      letter-spacing: 0.03em;
+    }
+    .consultation-cta a:hover { transform: translateY(-2px); }
+
+    /* ─── TEAM ─── */
+    .team { background: var(--cream); }
+    .team-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+    .team-header .section-label { justify-content: center; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .team-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .team-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(0,0,0,0.1); }
+    .team-img {
+      aspect-ratio: 3/4;
+      background: var(--navy);
+      overflow: hidden;
+      position: relative;
+    }
+    .team-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: var(--transition); }
+    .team-card:hover .team-img img { transform: scale(1.04); }
+    .team-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
+    }
+    .team-info { padding: 24px 28px; }
+    .team-info h3 { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 4px; letter-spacing: -0.02em; }
+    .team-role { font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+    .team-bio { font-size: 13px; font-weight: 450; color: var(--slate); line-height: 1.7; margin-top: 10px; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials { 
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&auto=format&fit=crop&q=30');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+    }
+    .testimonials .section-label { color: var(--gold-light); }
+    .testimonials .section-label::before { background: var(--gold-light); }
+    .testimonials h2.section-title { color: var(--white); }
+    .testimonials-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
+    .testimonials-header .section-desc { color: rgba(255,255,255,0.5); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card p { font-size: 16px; font-weight: 500; color: var(--white); line-height: 1.7; margin-bottom: 28px; }
+    .testimonial-card {
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .testimonial-card:nth-child(1) { background: linear-gradient(135deg, #e84393 0%, #f97316 100%); }
+    .testimonial-card:nth-child(2) { background: linear-gradient(135deg, #c84b9e 0%, #e84393 100%); }
+    .testimonial-card:nth-child(3) { background: linear-gradient(135deg, #f97316 0%, #eab308 100%); }
+    .testimonial-card:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(0,0,0,0.3); }
+    .testimonial-quote { font-size: 48px; color: rgba(255,255,255,0.3); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .testimonial-card p { font-size: 15px; color: var(--white); line-height: 1.7; font-weight: 500; margin-bottom: 28px; }
+    .testimonial-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.25); margin-bottom: 20px; }
+    .testimonial-author { font-size: 15px; font-weight: 700; color: var(--white); font-family: var(--font-display); letter-spacing: -0.01em; }
+    .testimonial-company { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.8); margin-top: 2px; letter-spacing: 0.04em; }
+
+    /* ─── BLOG ─── */
+    .blog { background: var(--white); }
+    .blog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .blog-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--cream);
+      transition: var(--transition);
+    }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.09); }
+    .blog-img {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      overflow: hidden;
+    }
+    .blog-meta { padding: 24px 24px 0; display: flex; align-items: center; gap: 12px; }
+    .blog-cat {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.1);
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-family: var(--font-display);
+    }
+    .blog-date { font-size: 12px; font-weight: 500; color: var(--slate); }
+    .blog-info { padding: 16px 24px 28px; }
+    .blog-info h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .blog-info p { font-size: 13px; font-weight: 450; color: var(--slate); line-height: 1.7; }
+    .blog-read { font-size: 13px; font-weight: 700; color: var(--green-accent); display: flex; align-items: center; gap: 5px; text-decoration: none; margin-top: 14px; transition: var(--transition); letter-spacing: 0.03em; }
+    .blog-read:hover { gap: 9px; }
+
+    /* ─── CONTACT CTA ─── */
+    .contact-cta {
+      background: var(--cream);
+      padding: 80px 0;
+    }
+    .blog-card:hover .blog-img img { transform: scale(1.06); }
+    .cta-box {
+      background: var(--navy);
+      border-radius: 24px;
+      padding: 72px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&auto=format&fit=crop&q=40');
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.06;
+      border-radius: 24px;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    }
+    .cta-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 3.5vw, 52px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .cta-content h2 em { color: var(--gold); font-style: italic; font-weight: 300; }
+    .cta-content p { font-size: 16px; font-weight: 450; color: rgba(255,255,255,0.75); line-height: 1.8; }
+    .cta-form { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 36px; border: 1px solid rgba(255,255,255,0.08); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 8px; font-family: var(--font-display); }
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 450;
+      color: var(--white);
+      font-family: var(--font-body);
+      transition: var(--transition);
+      outline: none;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,0.25); font-weight: 400; }
+    .form-input:focus { border-color: rgba(201,168,76,0.5); background: rgba(255,255,255,0.09); }
+    textarea.form-input { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      font-family: var(--font-display);
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: 0.03em;
+    }
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #060e1c;
+      color: rgba(255,255,255,0.7);
+      padding: 72px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&auto=format&fit=crop&q=20');
+      background-size: cover;
+      background-position: center top;
+      opacity: 0.04;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 60px; }
+    .footer-brand { }
+    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .footer-logo .logo-mark { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); }
+    .footer-logo .logo-text { color: var(--white); }
+    .footer-brand p { font-size: 14px; font-weight: 450; line-height: 1.8; margin-bottom: 24px; max-width: 300px; }
+    .social-links { display: flex; gap: 12px; }
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: var(--transition);
+      font-family: var(--font-display);
+    }
+    .social-link:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--white); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; font-family: var(--font-display); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; font-weight: 450; color: rgba(255,255,255,0.65); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 450;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-contact-info { display: flex; flex-direction: column; gap: 8px; }
+    .contact-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 450; color: rgba(255,255,255,0.7); }
+    .contact-item-icon { font-size: 16px; }
+
+    /* ─── PAGE SECTIONS (About, Services, Contact pages) ─── */
+    .page-hero {
+      background: var(--navy);
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 60%);
+    }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .breadcrumb span { color: var(--gold); }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 500; color: var(--white); }
+
+    /* ─── MOBILE NAV ─── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--navy);
+      z-index: 9999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-display); font-size: 36px; font-weight: 800; color: var(--white); text-decoration: none; transition: var(--transition); letter-spacing: -0.02em; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close { position: absolute; top: 24px; right: 32px; background: none; border: none; font-size: 32px; color: var(--white); cursor: pointer; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image-block { display: none; }
+      .about-content { padding-left: 0; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .numbers-grid { grid-template-columns: 1fr 1fr; }
+      .whyus-grid { grid-template-columns: 1fr; }
+      .whyus-visual { position: static; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .cta-box { grid-template-columns: 1fr; padding: 48px 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .container { padding: 0 20px; }
+      .topbar { display: none; }
+      .nav-inner { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .numbers-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 36px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .services-header, .testimonials-header, .blog-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+      .team-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .hero-inner { padding-top: 60px; }
+    }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>📞 <a href="tel:+919727397708">+91 9727 397 708</a></span>
+      <span>✉️ <a href="mailto:mananhkansara@gmail.com">mananhkansara@gmail.com</a></span>
+    </div>
+    <div>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8v8l-8 4-8-4V8l8-3.82z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        Kansara & Associates
+        <span>Certified Public Accountants</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#blog">Insights</a></li>
+      <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#team" onclick="toggleMenu()">Team</a>
+  <a href="#blog" onclick="toggleMenu()">Insights</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">CPA Certified · 10+ Years · Australia Based</div>
+      <h1>We Turn Your<br>Numbers Into <em>Growth</em></h1>
+      <p class="hero-desc">Expert accounting, tax planning, and business advisory services — powered by deep expertise and cutting-edge AI for smarter, faster results.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Free Consultation →</a>
+        <a href="#services" class="btn-secondary">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">300<span style="font-size:28px">+</span></div>
+          <div class="stat-label">Businesses Optimised</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10<span style="font-size:28px">+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98<span style="font-size:28px">%</span></div>
+          <div class="stat-label">Client Retention</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <!-- Real office/financial image inside the card -->
+        <div style="border-radius:10px;overflow:hidden;margin-bottom:20px;height:180px;">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&auto=format&fit=crop&q=80" alt="Financial planning in action" loading="eager" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="float-card float-card-1">
+          <div class="float-card-icon green">📈</div>
+          <div class="float-card-text">
+            <strong>Tax Savings</strong>
+            <span>Avg. 28% reduction</span>
+          </div>
+        </div>
+        <div class="float-card float-card-2">
+          <div class="float-card-icon gold">⭐</div>
+          <div class="float-card-text">
+            <strong>5-Star Rated</strong>
+            <span>Google Reviews</span>
+          </div>
+        </div>
+        <div class="card-top-row">
+          <div class="card-badge">Dashboard Overview</div>
+          <div class="card-year">FY 2025–26</div>
+        </div>
+        <div class="services-mini">
+          <div class="service-mini-item">
+            <div class="service-mini-icon">🧾</div>
+            <div class="service-mini-name">Tax Returns</div>
+          </div>
+          <div class="service-mini-item">
+            <div class="service-mini-icon">📊</div>
+            <div class="service-mini-name">Advisory</div>
+          </div>
+          <div class="service-mini-item">
+            <div class="service-mini-icon">📚</div>
+            <div class="service-mini-name">Bookkeeping</div>
+          </div>
+          <div class="service-mini-item">
+            <div class="service-mini-icon">🔍</div>
+            <div class="service-mini-name">Audit & Risk</div>
+          </div>
+        </div>
+        <div class="hero-metric">
+          <div class="metric-icon">💰</div>
+          <div class="metric-text">
+            <strong>$2.4M+</strong>
+            <span>Tax savings delivered to clients</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trustbar">
+  <div class="trustbar-inner">
+    <div class="trustbar-label">Trusted by</div>
+    <div class="trustbar-logos">
+      <div class="trust-logo">⚡ ENERGATOR</div>
+      <div class="trust-divider"></div>
+      <div class="trust-logo">GLMP.IT</div>
+      <div class="trust-divider"></div>
+      <div class="trust-logo">gaze<em>it</em></div>
+      <div class="trust-divider"></div>
+      <div class="trust-logo">MTVS.NEWS</div>
+      <div class="trust-divider"></div>
+      <div class="trust-logo">TRAVELO</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-block">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&auto=format&fit=crop&q=80" alt="Professional accounting team meeting" loading="lazy">
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&auto=format&fit=crop&q=80" alt="Financial analysis and reporting" loading="lazy">
+        </div>
+        <div class="years-badge">
+          <strong>10+</strong>
+          <span>Years</span>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">The Backbone of <em>Your</em> Financial Success</h2>
+        <p class="section-desc">We believe accounting doesn't have to be complicated. Our goal is to make your financials easy to understand, keeping processes simple and transparent so you can focus on what matters most — your business.</p>
+        <div class="about-pillars">
+          <div class="pillar reveal reveal-delay-1">
+            <h4>Simple & Transparent</h4>
+            <p>Straightforward financials with clear processes you can actually understand.</p>
+          </div>
+          <div class="pillar reveal reveal-delay-2">
+            <h4>Tailored Solutions</h4>
+            <p>Customised strategies for your specific industry, goals, and growth plans.</p>
+          </div>
+          <div class="pillar reveal reveal-delay-1">
+            <h4>AI-Powered Accuracy</h4>
+            <p>Human expertise enhanced by cutting-edge AI for faster, smarter insights.</p>
+          </div>
+          <div class="pillar reveal reveal-delay-2">
+            <h4>All Under One Roof</h4>
+            <p>Tax, bookkeeping, advisory, and compliance — seamlessly integrated.</p>
+          </div>
+        </div>
+        <div class="about-cta">
+          <a href="#contact" class="btn-dark">Work With Us</a>
+          <a href="#services" class="about-cta-link">Explore Services →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal">What We Offer</div>
+        <h2 class="section-title reveal">Expert Services <em>Tailored</em><br>to Your Business</h2>
+      </div>
+      <a href="#contact" class="btn-dark reveal">All Services →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🧾</div>
+        <h3>Tax Accounting & Planning</h3>
+        <p>Strategic tax planning that minimises your liability while ensuring full compliance. We stay ahead of changing regulations so you don't have to.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">📚</div>
+        <h3>Bookkeeping Services</h3>
+        <p>Meticulous, accurate bookkeeping that gives you a real-time picture of your financial health. Cloud-based and always up to date.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">📊</div>
+        <h3>Business Advisory</h3>
+        <p>Strategic guidance to accelerate growth, improve profitability, and navigate the complexities of running a modern business in Australia.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🔍</div>
+        <h3>Audit & Assurance</h3>
+        <p>Independent, thorough audits that build stakeholder confidence and uncover opportunities for operational improvement.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🏢</div>
+        <h3>SMSF Administration</h3>
+        <p>Comprehensive self-managed super fund services — setup, compliance, reporting, and investment strategy tailored to your retirement goals.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🌐</div>
+        <h3>Compliance Management</h3>
+        <p>Stay ahead of ATO requirements with proactive compliance management. From BAS to company returns, we handle it all with precision.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers">
+  <div class="numbers-inner">
+    <div class="numbers-grid">
+      <div class="number-item reveal">
+        <div class="number-value">300<span class="number-unit">+</span></div>
+        <div class="number-label">Businesses Optimised</div>
+      </div>
+      <div class="number-item reveal reveal-delay-1">
+        <div class="number-value">500<span class="number-unit">+</span></div>
+        <div class="number-label">Successful Tax Returns</div>
+      </div>
+      <div class="number-item reveal reveal-delay-2">
+        <div class="number-value">$2.4<span class="number-unit">M</span></div>
+        <div class="number-label">In Client Tax Savings</div>
+      </div>
+      <div class="number-item reveal reveal-delay-3">
+        <div class="number-value">98<span class="number-unit">%</span></div>
+        <div class="number-label">Client Retention Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE IMAGE STRIP -->
+<div style="height:420px;overflow:hidden;position:relative;">
+  <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=1800&auto=format&fit=crop&q=70" alt="Professional business team" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,22,40,0.85) 0%, rgba(10,22,40,0.4) 50%, rgba(10,22,40,0.1) 100%);"></div>
+  <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 80px;max-width:1280px;margin:0 auto;left:0;right:0;">
+    <div>
+      <p style="font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;">Our Commitment</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:500;color:#fff;line-height:1.2;max-width:620px;">We don't just do your accounts — <em style="color:#c9a84c;font-style:italic;">we become your financial partner</em></h2>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;background:#c9a84c;color:#0a1628;padding:14px 28px;border-radius:6px;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:0.04em;transition:all 0.3s ease;">Get Started Today →</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="whyus">
+  <div class="container">
+    <div class="whyus-grid">
+      <div>
+        <div class="section-label reveal">Why Choose Us</div>
+        <h2 class="section-title reveal">The Difference <em>Expertise</em><br>Makes</h2>
+        <div class="reasons">
+          <div class="reason reveal">
+            <div class="reason-number">01</div>
+            <div class="reason-content">
+              <h3>Customised Strategies for Your Exact Needs</h3>
+              <p>No two businesses are the same. We take time to understand your goals, industry, and challenges to build strategies that genuinely work for you.</p>
+            </div>
+          </div>
+          <div class="reason reveal">
+            <div class="reason-number">02</div>
+            <div class="reason-content">
+              <h3>Data-Driven Approaches for Maximum Impact</h3>
+              <p>We combine decades of professional experience with AI-powered tools to deliver insights that are faster, more accurate, and more actionable.</p>
+            </div>
+          </div>
+          <div class="reason reveal">
+            <div class="reason-number">03</div>
+            <div class="reason-content">
+              <h3>Proven Track Record Across Industries</h3>
+              <p>From healthcare and real estate to e-commerce and legal services — our diverse portfolio proves our ability to deliver results in any sector.</p>
+            </div>
+          </div>
+          <div class="reason reveal">
+            <div class="reason-number">04</div>
+            <div class="reason-content">
+              <h3>Transparent Pricing — No Surprises</h3>
+              <p>Clear, upfront pricing with no hidden fees. You always know exactly what you're paying for and the value you're receiving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whyus-visual reveal">
+        <div style="border-radius:16px;overflow:hidden;margin-bottom:20px;height:220px;">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&auto=format&fit=crop&q=80" alt="Client meeting and consultation" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="whyus-card">
+          <h3>Your Free First Consultation</h3>
+          <p class="subtitle">No commitment. No pressure. Just expert advice.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span> Review of your current tax situation</li>
+            <li><span class="check">✓</span> Identify immediate savings opportunities</li>
+            <li><span class="check">✓</span> Customised recommendations for your business</li>
+            <li><span class="check">✓</span> Assessment of compliance obligations</li>
+            <li><span class="check">✓</span> Clear roadmap for financial improvement</li>
+            <li><span class="check">✓</span> Answer all your accounting questions</li>
+          </ul>
+          <div class="consultation-cta">
+            <p>🎁 Free consultation — valued at $300</p>
+            <a href="#contact">Claim Your Free Session →</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="team-header reveal">
+      <div class="section-label">Our People</div>
+      <h2 class="section-title">Meet the Experts <em>Behind</em><br>Your Finances</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80" alt="Maulik Kansara - Director" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div class="team-info">
+          <h3>Maulik Kansara</h3>
+          <div class="team-role">CPA · Director & Client Manager</div>
+          <p class="team-bio">Seasoned accounting professional with 10+ years of experience in Australia. CPA Certified with deep expertise in tax planning and business advisory.</p>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80" alt="Sarah Mitchell - Senior Tax Accountant" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div class="team-info">
+          <h3>Sarah Mitchell</h3>
+          <div class="team-role">Senior Tax Accountant</div>
+          <p class="team-bio">Specialising in complex tax structures and SMSF administration. Known for her meticulous approach and proactive client communication.</p>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80" alt="James Patel - Business Advisory Specialist" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div class="team-info">
+          <h3>James Patel</h3>
+          <div class="team-role">Business Advisory Specialist</div>
+          <p class="team-bio">Combines financial acumen with strategic thinking to help businesses scale sustainably. Expert in cash flow optimisation and growth planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div>
+        <div class="section-label">Client Stories</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <p class="section-desc">Trusted by 300+ businesses across Australia</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p>Kansara & Associates has been instrumental in growing our online presence and financial health. Their tax strategies saved us over $60K last year. Highly recommend them to any business serious about growth.</p>
+        <div class="testimonial-divider"></div>
+        <div class="testimonial-author">Anna Greene</div>
+        <div class="testimonial-company">Green & Co</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote">"</div>
+        <p>Exceptional service and outstanding results. They really understand our needs as a real estate agency. Their attention to detail and proactive communication is unmatched in the industry.</p>
+        <div class="testimonial-divider"></div>
+        <div class="testimonial-author">David Winters</div>
+        <div class="testimonial-company">Winters Realty</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote">"</div>
+        <p>Our e-commerce sales soared thanks to their strategic financial guidance and cash flow management. The team is incredibly knowledgeable and always available when you need them.</p>
+        <div class="testimonial-divider"></div>
+        <div class="testimonial-author">Lisa Kohler</div>
+        <div class="testimonial-company">Essential E-Commerce</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <div class="section-label reveal">Latest Insights</div>
+        <h2 class="section-title reveal">Financial Intelligence<br>for <em>Smarter</em> Decisions</h2>
+      </div>
+      <a href="#" class="btn-dark reveal">All Articles →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-img" style="overflow:hidden;height:200px;">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=700&auto=format&fit=crop&q=80" alt="Tax planning documents" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-cat">Tax Planning</span>
+          <span class="blog-date">May 2025</span>
+        </div>
+        <div class="blog-info">
+          <h3>5 Overlooked Tax Deductions Every Australian Business Owner Must Know</h3>
+          <p>Most business owners miss thousands in legitimate deductions. Here's what the ATO allows that you're probably not claiming.</p>
+          <a href="#" class="blog-read">Read Article →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-1">
+        <div class="blog-img" style="overflow:hidden;height:200px;">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&auto=format&fit=crop&q=80" alt="AI and technology in accounting" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-cat">Technology</span>
+          <span class="blog-date">Apr 2025</span>
+        </div>
+        <div class="blog-info">
+          <h3>How AI Is Transforming Accounting — And What It Means for Your Business</h3>
+          <p>AI-powered bookkeeping and forecasting tools are no longer just for large corporations. Here's how SMEs can benefit today.</p>
+          <a href="#" class="blog-read">Read Article →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-2">
+        <div class="blog-img" style="overflow:hidden;height:200px;">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=700&auto=format&fit=crop&q=80" alt="Business growth and cash flow charts" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-cat">Business Growth</span>
+          <span class="blog-date">Mar 2025</span>
+        </div>
+        <div class="blog-info">
+          <h3>Cash Flow Management: The Difference Between a Business That Thrives and One That Survives</h3>
+          <p>Strong cash flow is the lifeblood of every business. These proven strategies will help you maintain financial stability through any season.</p>
+          <a href="#" class="blog-read">Read Article →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<div class="contact-cta" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-box-bg"></div>
+      <div class="cta-content">
+        <h2>Let's Build Your <em>Financial</em> Future Together</h2>
+        <p>Book your complimentary 1-hour consultation and discover exactly how much you could save on tax, optimise your operations, and accelerate your growth.</p>
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <div style="display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.7); font-size:14px;">
+            <span style="color:var(--gold); font-size:20px;">📞</span> +91 9727 397 708
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.7); font-size:14px;">
+            <span style="color:var(--gold); font-size:20px;">✉️</span> mananhkansara@gmail.com
+          </div>
+        </div>
+      </div>
+      <div class="cta-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="john@yourcompany.com.au">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Interested In</label>
+          <input type="text" class="form-input" placeholder="e.g. Tax planning, Bookkeeping...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" placeholder="Tell us about your business and what you need help with..."></textarea>
+        </div>
+        <button class="form-submit">Book My Free Consultation →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;fill:#c9a84c;">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8v8l-8 4-8-4V8l8-3.82z"/>
+            </svg>
+          </div>
+          <div class="logo-text" style="color:white;">
+            Kansara & Associates
+            <span>Certified Public Accountants</span>
+          </div>
+        </div>
+        <p>Empowering Australian businesses with expert accounting, strategic tax planning, and business advisory services since 2014.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">tw</a>
+          <a href="#" class="social-link">fb</a>
+          <a href="#" class="social-link">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Tax Accounting</a></li>
+          <li><a href="#">Business Advisory</a></li>
+          <li><a href="#">Audit & Assurance</a></li>
+          <li><a href="#">Bookkeeping</a></li>
+          <li><a href="#">SMSF Administration</a></li>
+          <li><a href="#">Compliance Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Insights Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <div class="contact-item"><span class="contact-item-icon">📞</span> +91 9727 397 708</div>
+          <div class="contact-item"><span class="contact-item-icon">✉️</span> mananhkansara@gmail.com</div>
+          <div class="contact-item"><span class="contact-item-icon">📍</span> Australia</div>
+          <div class="contact-item"><span class="contact-item-icon">🕐</span> Mon–Fri, 9am–6pm AEST</div>
+        </div>
+        <div style="margin-top: 24px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 10px; padding: 16px;">
+          <p style="font-size:12px; color: var(--gold); font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">CPA Certified</p>
+          <p style="font-size:13px; color: rgba(255,255,255,0.5);">Member of CPA Australia — your guarantee of professional excellence.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kansara & Associates. All rights reserved.</span>
+      <span>Designed with precision for financial excellence</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+
+  // Form submit
+  document.querySelector('.form-submit').addEventListener('click', function() {
+    this.textContent = '✓ Message Sent! We\'ll be in touch soon.';
+    this.style.background = '#1a6b4a';
+    this.style.color = 'white';
+    setTimeout(() => {
+      this.textContent = 'Book My Free Consultation →';
+      this.style.background = '';
+      this.style.color = '';
+    }, 3000);
+  });
+</script>
+</body>
+</html>
