@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accounting - Free Bootstrap 4 Template by Manan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/site-header.css">
+    
+    <!-- Custom CSS for Schedule Meeting Section -->
+    <style>
+    .meeting-card {
+      border-radius: 15px !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .meeting-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+    }
+    
+    .meeting-form-contact .form-control {
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+      transition: border-color 0.3s ease;
+      padding: 12px 15px;
+    }
+    
+    .meeting-form-contact .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    
+    .meeting-form-contact .form-label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #495057;
+    }
+    
+    .btn-primary.btn-lg {
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: none;
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+    
+    .btn-primary.btn-lg:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+      background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    }
+    
+    .meeting-icon {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .benefit-item {
+      transition: transform 0.2s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .text-white-75 {
+      color: rgba(255, 255, 255, 0.75) !important;
+    }
+    
+    .text-white-50 {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .meeting-card {
+        margin-top: 30px;
+      }
+      
+      .meeting-content h2 {
+        font-size: 28px;
+      }
+      
+      .meeting-form-contact .row .col-sm-6 {
+        margin-bottom: 15px;
+      }
+      
+      .btn-primary.btn-lg {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .meeting-card {
+        padding: 20px !important;
+      }
+      
+      .meeting-content {
+        text-align: center;
+      }
+      
+      .benefit-item {
+        justify-content: center;
+      }
+    }
+    </style>
+  </head>
+  <body class="has-fixed-header">
+
+    <header class="site-header" id="site-header">
+      <div class="site-header__topbar d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <p class="mb-0 phone">
+                <a href="tel:+919727397708" class="mr-4"><span class="fa fa-phone mr-1"></span> +919727397708</a>
+                <a href="mailto:mananhkansara@gmail.com"><span class="fa fa-paper-plane mr-1"></span> mananhkansara@gmail.com</a>
+              </p>
+            </div>
+            <div class="col-lg-5 d-flex justify-content-lg-end">
+              <div class="social-media">
+                <p class="mb-0 d-flex justify-content-end">
+                  <a href="https://www.linkedin.com/in/manan-kansara-36564b51/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-linkedin"><i class="sr-only">LinkedIn</i></span></a>
+                  <a href="https://www.facebook.com/manan.kansara14190/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                  <a href="https://www.instagram.com/manan0203/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light site-header__nav" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand site-header__brand" href="index.html">
+            <img src="images/logo.png" alt="ADEP Advisers" class="site-header__logo" id="site-logo" style="display:none;" onload="this.style.display='block'; var t=document.getElementById('site-brand-text'); if(t) t.style.display='none';" onerror="this.style.display='none';">
+            <span class="site-header__brand-text" id="site-brand-text">ADEP Advisers</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+              <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#book-meeting" class="btn btn-primary nav-book-btn">Book a Meeting</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/image-5.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact Us <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-0 bread">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center">
+					<div class="col-md-12">
+						<div class="wrapper">
+							<div class="row no-gutters">
+								<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<h3 class="mb-4">Get in touch</h3>
+										<div id="form-message-warning" class="mb-4"></div> 
+					      		<div id="form-message-success" class="mb-4">
+					            Your message was sent, thank you!
+					      		</div>
+										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">Full Name</label>
+														<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+													</div>
+												</div>
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="email">Email Address</label>
+														<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="subject">Subject</label>
+														<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="#">Message</label>
+														<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="submit" value="Send Message" class="btn btn-primary">
+														<div class="submitting"></div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+									<div class="info-wrap bg-primary w-100 p-md-5 p-4">
+										<h3>Let's get in touch</h3>
+										<p class="mb-4">We're open for any suggestion or just to have a chat</p>
+					        	<div class="dbox w-100 d-flex align-items-start">
+					        		<div class="icon d-flex align-items-center justify-content-center">
+					        			<span class="fa fa-map-marker"></span>
+					        		</div>
+					        		<div class="text pl-3">
+						            <p><span>Address:</span> B 6, Silver leaf apartment, Haridaspark society, near Galaxy mall, Jhansi ki rani BRTS, Ambawadi</p>
+						          </div>
+					          </div>
+					        	<div class="dbox w-100 d-flex align-items-center">
+					        		<div class="icon d-flex align-items-center justify-content-center">
+					        			<span class="fa fa-phone"></span>
+					        		</div>
+					        		<div class="text pl-3">
+						            <p><span>Phone:</span> <a href="tel://+919727397708">+919727397708</a></p>
+						          </div>
+					          </div>
+					        	<div class="dbox w-100 d-flex align-items-center">
+					        		<div class="icon d-flex align-items-center justify-content-center">
+					        			<span class="fa fa-paper-plane"></span>
+					        		</div>
+					        		<div class="text pl-3">
+						            <p><span>Email:</span> <a href="mailto:mananhkansara@gmail.com">mananhkansara@gmail.com</a></p>
+						          </div>
+					          </div>
+					        	<div class="dbox w-100 d-flex align-items-center">
+					        		<div class="icon d-flex align-items-center justify-content-center">
+					        			<span class="fa fa-globe"></span>
+					        		</div>
+					        		<div class="text pl-3">
+						            <p><span>Website</span> <a href="#">mananhkansara.com</a></p>
+						          </div>
+					          </div>
+				          </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+    	</div>
+    </section>
+
+    <!-- Schedule Meeting Section -->
+    <section class="ftco-section bg-primary" id="book-meeting">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <div class="meeting-content text-white">
+                  <span class="subheading text-white-50 mb-2 d-block">Let's Connect</span>
+                  <h2 class="mb-4 text-white">Schedule a Free Consultation</h2>
+                  <p class="mb-4 text-white-75">Ready to discuss your accounting needs? Book a convenient Google Meet session with Manan and get expert financial advice tailored to your business.</p>
+                  
+                  <div class="meeting-benefits mb-4">
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Free 30-minute consultation</span>
+                    </div>
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Personalized financial strategy</span>
+                    </div>
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Expert business guidance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="meeting-card bg-white rounded shadow-lg p-4 p-lg-5">
+                  <div class="text-center mb-4">
+                    <div class="meeting-icon mb-3">
+                      <span class="fa fa-video-camera text-primary" style="font-size: 48px;"></span>
+                    </div>
+                    <h3 class="text-dark mb-2">Book Your Meeting</h3>
+                    <p class="text-muted">Choose your preferred time slot</p>
+                  </div>
+                  
+                  <form class="meeting-form-contact">
+                    <div class="row">
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Full Name *</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Email *</label>
+                        <input type="email" class="form-control" placeholder="your@email.com" required>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Phone</label>
+                        <input type="tel" class="form-control" placeholder="+91 9999999999">
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Preferred Date</label>
+                        <input type="date" class="form-control" required>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label text-dark">Preferred Time</label>
+                      <select class="form-control" required>
+                        <option value="">Select Time Slot</option>
+                        <option value="09:00">09:00 AM - 09:30 AM</option>
+                        <option value="10:00">10:00 AM - 10:30 AM</option>
+                        <option value="11:00">11:00 AM - 11:30 AM</option>
+                        <option value="14:00">02:00 PM - 02:30 PM</option>
+                        <option value="15:00">03:00 PM - 03:30 PM</option>
+                        <option value="16:00">04:00 PM - 04:30 PM</option>
+                        <option value="17:00">05:00 PM - 05:30 PM</option>
+                      </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label class="form-label text-dark">Message (Optional)</label>
+                      <textarea class="form-control" rows="3" placeholder="Tell us about your business needs..."></textarea>
+                    </div>
+                    
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="fa fa-calendar mr-2"></span>
+                        Schedule Google Meet
+                      </button>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                      <small class="text-muted">
+                        <span class="fa fa-shield mr-1"></span>
+                        Your information is secure and confidential
+                      </small>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   	<!-- Google Maps container - Temporarily hidden until valid API key is obtained -->
+   	<!-- <div id="map" class="map"></div> -->
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
+      <div class="container py-5">
+    		<div class="row">
+          <div class="col-md-7 d-flex align-items-center">
+            <h2 class="mb-3 mb-sm-0" style="color:black; font-size: 22px;">Sign Up for Your Free 1st Accounting Consultation</h2>
+          </div>
+          <div class="col-md-5 d-flex align-items-center">
+            <form action="#" class="subscribe-form">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control" placeholder="Enter email address">
+                <input type="submit" value="Subscribe" class="submit px-3">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+			<div class="container-fluid px-lg-5">
+				<div class="row">
+					<div class="col-md-9 py-5">
+						<div class="row">
+							<div class="col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">About us</h2>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<ul class="ftco-footer-social p-0">
+		              <li class="ftco-animate"><a href="https://www.linkedin.com/in/manan-kansara-36564b51/" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><span class="fa fa-linkedin"></span></a></li>
+		              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+		              <li class="ftco-animate"><a href="https://www.facebook.com/manan.kansara14190/" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+		              <li class="ftco-animate"><a href="https://www.instagram.com/manan0203/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+		            </ul>
+							</div>
+							<div class="col-md-8">
+								<div class="row justify-content-center">
+									<div class="col-md-12 col-lg-10">
+										<div class="row">
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">Services</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">Tax Accounting</a></li>
+						              <li><a href="#" class="py-1 d-block">Business Advisory</a></li>
+						              <li><a href="#" class="py-1 d-block">Audit & Assurance</a></li>
+						              <li><a href="#" class="py-1 d-block">Bookkeeping Services</a></li>
+						            </ul>
+											</div>
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">Discover</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">About us</a></li>
+						              <li><a href="#" class="py-1 d-block">Contract us</a></li>
+						              <li><a href="#" class="py-1 d-block">Terms &amp; Conditions</a></li>
+						              <li><a href="#" class="py-1 d-block">Policies</a></li>
+						            </ul>
+											</div>
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">Resources</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">Security</a></li>
+						              <li><a href="#" class="py-1 d-block">Global</a></li>
+						              <li><a href="#" class="py-1 d-block">Charts</a></li>
+						              <li><a href="#" class="py-1 d-block">Privacy</a></li>
+						            </ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-md-5">
+							<div class="col-md-12">
+								<p class="copyright"><!-- Link back to MananKanasa can't be removed. Template is licensed under CC BY 3.0. -->
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://MananKansara.com" target="_blank">MananKansara.com</a>
+					  <!-- Link back to MananKanasa can't be removed. Template is licensed under CC BY 3.0. --></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+						<h2 class="footer-heading">Free consultation</h2>
+						<form action="#" class="form-consultation">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+              	<button type="submit" class="form-control submit px-3">Send A Message</button>
+              </div>
+            </form>
+					</div>
+				</div>
+			</div>
+		</footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <!-- Google Maps - Temporarily disabled until valid API key is obtained -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY_HERE"></script> -->
+  <!-- <script src="js/google-map.js"></script> -->
+  <script src="js/main.js"></script>
+    
+  <!-- Schedule Meeting JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Form submission handling for CONTACT PAGE form
+      const contactForm = document.querySelector('.meeting-form-contact');
+      if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form data
+              const name = this.querySelector('input[placeholder="Your Name"]').value;
+              const email = this.querySelector('input[placeholder="your@email.com"]').value;
+              const phone = this.querySelector('input[placeholder="+91 9999999999"]').value;
+              const date = this.querySelector('input[type="date"]').value;
+              const time = this.querySelector('select').value;
+              const message = this.querySelector('textarea').value;
+              
+              // Validate required fields
+              if (!name || !email || !date || !time) {
+                  alert('Please fill in all required fields (Name, Email, Date, and Time).');
+                  return;
+              }
+              
+              // Create Google Calendar event
+              createGoogleCalendarEvent(name, email, phone, date, time, message);
+          });
+      }
+  });
+
+  function createGoogleCalendarEvent(name, email, phone, date, time, message) {
+      // Parse the selected time
+      const timeSlots = {
+          '09:00': { start: '09:00', end: '09:30' },
+          '10:00': { start: '10:00', end: '10:30' },
+          '11:00': { start: '11:00', end: '11:30' },
+          '14:00': { start: '14:00', end: '14:30' },
+          '15:00': { start: '15:00', end: '15:30' },
+          '16:00': { start: '16:00', end: '16:30' },
+          '17:00': { start: '17:00', end: '17:30' }
+      };
+      
+      const selectedSlot = timeSlots[time];
+      if (!selectedSlot) {
+          alert('Please select a valid time slot.');
+          return;
+      }
+      
+      // Create start and end datetime
+      const startDateTime = new Date(`${date}T${selectedSlot.start}:00`);
+      const endDateTime = new Date(`${date}T${selectedSlot.end}:00`);
+      
+      // Format dates for Google Calendar (YYYYMMDDTHHMMSSZ format)
+      const startISO = startDateTime.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      const endISO = endDateTime.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      
+      // Create event details
+      const eventTitle = encodeURIComponent(`Accounting Consultation with Manan Kansara`);
+      const eventDetails = encodeURIComponent(
+          `Consultation Meeting Details:\n\n` +
+          `Client: ${name}\n` +
+          `Email: ${email}\n` +
+          `Phone: ${phone || 'Not provided'}\n` +
+          `Message: ${message || 'No additional message'}\n\n` +
+          `This is a Google Meet video consultation for accounting and financial advisory services.\n\n` +
+          `Meeting Host: Manan Kansara\n` +
+          `Email: mananhkansara@gmail.com\n` +
+          `Phone: +919727397708`
+      );
+      const location = encodeURIComponent('Google Meet (Link will be shared)');
+      
+      // Google Calendar URL parameters
+      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+          `&text=${eventTitle}` +
+          `&dates=${startISO}/${endISO}` +
+          `&details=${eventDetails}` +
+          `&location=${location}` +
+          `&add=${email},mananhkansara@gmail.com` +
+          `&trp=false`;
+      
+      // Show success message and redirect
+      showSuccessMessage(name, date, selectedSlot.start);
+      
+      // Small delay before opening calendar
+      setTimeout(() => {
+          window.open(calendarUrl, '_blank');
+      }, 1500);
+      
+      // Reset form
+      document.querySelector('.meeting-form-contact').reset();
+  }
+
+  function showSuccessMessage(name, date, time) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-check-circle" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Meeting Request Sent!</strong><br>
+                  <small>Hi ${name}, redirecting to Google Calendar...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+  
+  <!-- Newsletter Subscription JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle newsletter subscription form
+      const subscribeForm = document.querySelector('.subscribe-form');
+      if (subscribeForm) {
+          subscribeForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get the email input value
+              const emailInput = this.querySelector('input[placeholder="Enter email address"]');
+              const userEmail = emailInput.value.trim();
+              
+              // Validate email
+              if (!userEmail) {
+                  alert('Please enter your email address.');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL
+              const subject = encodeURIComponent('Free Accounting Consultation Request');
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `I would like to learn more about your accounting services and schedule a free consultation.\n\n` +
+                  `My email: ${userEmail}\n\n` +
+                  `Please let me know your availability.\n\n` +
+                  `Best regards`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showSubscriptionSuccess(userEmail);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              emailInput.value = '';
+          });
+      }
+  });
+
+  function showSubscriptionSuccess(email) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-envelope" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Subscription Successful!</strong><br>
+                  <small>Opening Gmail to compose your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+  
+  <!-- Footer Consultation Form JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle footer consultation form
+      const consultationForm = document.querySelector('.form-consultation');
+      if (consultationForm) {
+          consultationForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form data
+              const nameInput = this.querySelector('input[placeholder="Your Name"]');
+              const emailInput = this.querySelector('input[placeholder="Your Email"]');
+              const subjectInput = this.querySelector('input[placeholder="Subject"]');
+              const messageInput = this.querySelector('textarea[placeholder="Message"]');
+              
+              const userName = nameInput.value.trim();
+              const userEmail = emailInput.value.trim();
+              const userSubject = subjectInput.value.trim();
+              const userMessage = messageInput.value.trim();
+              
+              // Validate required fields
+              if (!userName || !userEmail || !userSubject || !userMessage) {
+                  alert('Please fill in all fields (Name, Email, Subject, and Message).');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL with form data
+              const subject = encodeURIComponent(userSubject);
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `${userMessage}\n\n` +
+                  `Contact Details:\n` +
+                  `Name: ${userName}\n` +
+                  `Email: ${userEmail}\n\n` +
+                  `I look forward to hearing from you.\n\n` +
+                  `Best regards,\n${userName}`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showConsultationSuccess(userName);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              nameInput.value = '';
+              emailInput.value = '';
+              subjectInput.value = '';
+              messageInput.value = '';
+          });
+      }
+  });
+
+  function showConsultationSuccess(name) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-paper-plane" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Message Ready!</strong><br>
+                  <small>Hi ${name}, opening Gmail to send your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+    
+  </body>
+</html>
